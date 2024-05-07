@@ -1,1 +1,100 @@
-<h1 class="text-red-400"></h1>
+<div
+  class="min-w-screen min-h-screen bg-teal-900 flex items center justify-center px-5 py-5 rounded-md"
+>
+  <div
+    class="w-full mx-auto rounded-xl shadow-xl text-gray-800 relative overflow-hidden"
+    style="max-width: 350px"
+  >
+    <h1 class="text-center text-white py-10 text-3xl font-bold">
+      Angular Calculator
+    </h1>
+    <!-- calculator screen start-->
+    <div
+      class="w-full h-40 bg-gradient-to-b from-gray-800 to-gray-700 text-right"
+    >
+      <!-- function screen -->
+      <div class="w-full py-5 px-6 text-2xl text-white font-thin">{{functionT}}</div>
+      <div class="w-full py-5 px-6 text-2xl text-white font-thin">{{showNumber | number}}</div>
+    </div>
+    <!-- calculator screen end-->
+
+    <!-- calculator buttons start -->
+    <div class="flex flex-col w-full">
+      <!-- first row start -->
+      <div class="flex w-full">
+        <button (click)="onClear()" class="bg-red-400 px-4 py-2 w-full border border-white">
+          C
+        </button>
+        <button (click)="onClick('%', 'function')" class="bg-red-400 px-4 py-2 w-full border border-white">
+          %
+        </button>
+        <button (click)="onClick('/', 'function')" class="bg-red-400 px-4 py-2 w-full border border-white">
+          /
+        </button>
+      </div>
+      <!-- first row end -->
+      <!-- second row start -->
+      <div class="flex w-full">
+        <button (click)="onClick('7', 'number')" class="bg-red-400 px-4 py-2 border border-white w-full">
+          7
+        </button>
+        <button (click)="onClick('8', 'number')" class="bg-red-400 px-4 py-2 border border-white w-full">
+          8
+        </button>
+        <button (click)="onClick('9', 'number')" class="bg-red-400 px-4 py-2 border border-white w-full">
+          9
+        </button>
+        <button (click)="onClick('*', 'function')" class="bg-red-400 px-4 py-2 border border-white w-full">
+          *
+        </button>
+      </div>
+      <!-- second row end -->
+      <!-- third row start -->
+      <div class="flex w-full">
+        <button (click)="onClick('4', 'number')" class="bg-red-400 px-4 py-2 border border-white w-full">
+          4
+        </button>
+        <button (click)="onClick('5', 'number')" class="bg-red-400 px-4 py-2 border border-white w-full">
+          5
+        </button>
+        <button (click)="onClick('6', 'number')" class="bg-red-400 px-4 py-2 border border-white w-full">
+          6
+        </button>
+        <button (click)="onClick('-', 'function')" class="bg-red-400 px-4 py-2 border border-white w-full">
+          -
+        </button>
+      </div>
+      <!-- third row end -->
+      <!-- forth row start -->
+      <div class="flex w-full">
+        <button (click)="onClick('1', 'number')" class="bg-red-400 px-4 py-2 border border-white w-full">
+          1
+        </button>
+        <button (click)="onClick('2', 'number')" class="bg-red-400 px-4 py-2 border border-white w-full">
+          2
+        </button>
+        <button (click)="onClick('3', 'number')" class="bg-red-400 px-4 py-2 border border-white w-full">
+          3
+        </button>
+        <button (click)="onClick('+', 'function')" class="bg-red-400 px-4 py-2 border border-white w-full">
+          +
+        </button>
+      </div>
+      <!-- forth row end -->
+      <!-- fifth row start -->
+      <div class="flex w-full">
+        <button (click)="onClick('0', 'number')" class="bg-red-400 px-4 py-2 border border-white w-full">
+          0
+        </button>
+        <button (click)="onClick('.', 'number')" class="bg-red-400 px-4 py-2 border border-white w-full">
+          .
+        </button>
+        <button (click)="calculate()" class="bg-red-400 px-4 py-2 border border-white w-full">
+          =
+        </button>
+      </div>
+      <!-- fifth row end -->
+    </div>
+    <!-- calculator buttons end -->
+  </div>
+</div>
